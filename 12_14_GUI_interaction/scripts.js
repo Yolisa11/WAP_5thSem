@@ -16,7 +16,7 @@ const modal_close= document.getElementById('modal')
 const inactive=document.querySelector('.modal_overlay') 
 */
 
-btn_click_me.addEventListener('mouseover',function(){
+    btn_click_me.addEventListener('mouseover',function(){
     btn_click_me.style.backgroundColor='blue';
 })
  btn_click_me.addEventListener('mouseout',function(){
@@ -47,4 +47,17 @@ const $burger= $('#menu')
 const $modal_btn=document.querySelector('.modal_container')
 const $modal_close= $('#modal')
 const $inactive=document.querySelector('.modal_overlay')
+
+
+
+
+let square = function(number) {
+    
+                return number**2
+            }
+            console.log(square(5))
+let square = number =>number**2
+                        console.log(square(5))
+
+            
  

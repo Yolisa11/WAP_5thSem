@@ -1,0 +1,38 @@
+                    lab 1:html css basics
+objectives:
+1. potfolio
+2. semantic html
+3. grid/ flexbox
+4. media query
+5.bootstrap implementation
+ theory:
+
+        1. semantic html5
+        intro---> defination, importance, significance, purpose
+        figure---> semantic, non semantic
+        source code template (html only)
+              meta data--> 1 line defination
+              semantic tags(header, nav, section, aside, article, footer,main)==1 line defn
+
+
+        2. grid/flexbox
+            grid-->when to use?
+            flexbox-->when 
+            syntax of each in css
+            diff beth them
+
+         3. media query
+            intro, purpose, responsive of ui
+            syntax
+
+
+         4. bootstrap
+            intro, why needed, importance
+            links   -- 2 links copied, css link, js link
+            components included in lab:
+                       cards(figure)
+
+           source code (html, css)  
+
+         conclusion and discussion           
+

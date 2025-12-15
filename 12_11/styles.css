@@ -5,7 +5,7 @@
 body{
     background-color: rgb(144, 144, 144);
     display: grid;
-    gap: 1rem;
+    gap: 1rem;//* space between grid items */
 
     grid-template-areas: 
         "header header"
