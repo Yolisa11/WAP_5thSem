@@ -1,0 +1,8 @@
+hover, dynamic menu, modal
+ 
+ # java
+id= getelementbyid
+class=queryselector.
+types of event= click, mouseover, mouseout,
+
+burger icon 
