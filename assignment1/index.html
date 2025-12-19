@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div style="display:flex; align-items: center; gap:1rem">
+            <div class = "logo "> Y </div>
+            <h1>Yolisa Bhujel</h1>
+        </div>
+        <nav>
+        <ul>
+            <li>Unordered List</li>
+            <li>Content 1</li>
+            <li>Content 2</li>
+            <li>Content 3</li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+    <div class="top-layout">
+
+        <section>
+            <h2 style="display: flex; justify-content: center;">Enter Details</h2>
+            <form class="fm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your name" required>
+
+                <label for="email" >Email:</label>
+                <input type="email" id="email" placeholder = "youremail@gmail.com" required>
+
+                <label >Password:</label>
+                <input type="password" id="password" placeholder = "**********" required>
+
+                <button class="purple-btn">Submit</button>
+
+            </form>
+        </section>
+        <aside>
+            <div style="display: flex; gap: 5rem;">
+                <div >
+                    <h2>Ordered List</h2>
+                    <ol>
+                        <li>Content 1</li>
+                        <li>Content 2</li>
+                        <li>Content 3</li>
+                        <li>Content 4</li>
+                    </ol>
+                </div>
+                <div>
+                    <h2>Description List</h2>
+                    <dl>
+                        <dt>Name:</dt>
+                        <dd>Yolisa Bhujel</dd>
+                        <dt>Post:</dt>
+                        <dd>Student</dd>
+                    </dl>
+                </div>
+            </div>
+        
+
+            <h2 style="font-size: 2rem;">Table</h2>
+            <table id="info-table">
+                <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+                </thead>
+
+               <tbody>
+                <tr>
+                    <td>Row 1, cell 1</td>
+                    <td>Row 1, cell 2</td>
+                </tr>
+                <tr>
+                    <td>Row 2, cell 1</td>
+                    <td>Row 2, cell 2</td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <td>Footer 1</td>
+                    <td>Footer 2</td>
+                </tr>
+                </tfoot>
+            </table>
+        </aside>
+    </div>
+        <section class="box_model">
+            <h2>CSS Box model</h2>
+            <div class="box">Text</div>
+        </section>
+        <section class="multimedia">
+            <h2 >MULTIMEDIA</h2>
+            <article style="flex-direction: row; display: flex; gap: 1rem;">
+                <img src="./assests/hi.jpg" alt="My Photo" width="300" height="230" class="media-img">
+                <video controls width="400" class="media-video">
+                <source src="./assests/sample_vid.mp4" type="video/mp4" >
+                </video>
+            </article>
+        </section>
+        <section class="section_project", style="flex-direction: column;">
+            <h1>Projects</h1>
+            <div style="display: flex; gap: 1rem;">
+                <div class="card" style="width: 18rem;">
+                <img src="./assests/code.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Code</h5>
+                <p class="card-text">Coding content</p>
+                <a href="#" class="btn btn-primary">lets go</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="./assests/sport.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Sports</h5>
+                <p class="card-text">Sport content</p>
+                <a href="#" class="btn btn-primary">lets go</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="./assests/study.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Study</h5>
+                <p class="card-text">Study content</p>
+                <a href="#" class="btn btn-primary">lets go</a>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+       <h1>Copyright HCOE</h1>
+    </footer>
+    
+</body>
+</html>
