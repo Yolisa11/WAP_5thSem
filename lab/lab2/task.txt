@@ -1,0 +1,4 @@
+1.counter on (Add Note )button click
+2.commit key,value of note to local storage (add notes to DOM)
+3.read the pending values from local storage and update to UI
+4.detect the seperate clicks of checkbox and delete using event delegation(identify the parent)
