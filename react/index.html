@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!--Including libraries via Content Delivery Network (CDN)-->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> <!--include React-->
+    <!--React handles components, state and logic-->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> <!--include React-DOM-->
+    <!--React-DOM handles rendering components into actual HTML page-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!--include Babel-->
+    <!-- Babel is required to convert modern JS and JSX into plain Javascript that all browsers can understand -->
+    <!-- Babel also allows for JavaScript and XML i.e JavaScript and HTML code combined -->
+    <!-- For eg: Below script consists of return value of HTML code but implemented in JavaScript-->
+    <script type="text/babel">
+        function Component(){ // component must start with capital letter
+            return(
+                <>
+                <h1>This is component</h1>
+                </>
+            )
+        }
+        function Component_props(props){ {/* props is used to pass data from one component to another component */}
+            return(
+                <>
+                <h2>This componennt uses props. {props.args}</h2>
+                </>
+            )
+        }
+        function Counter() // State Management in React
+        {
+            const [count, setCount] = React.useState(0) 
+           {/*'count' is a variable, setCount is a function which can alter value of variable 'counter' 
+               React is an object here, useState is method of React (React Hook)
+               Here, useState hook initializes variable count to 0*/}
+            function increment(){
+                setCount(count + 1)
+            }
+
+            return(
+                <>
+                    <h2>Counter : {count}</h2>
+                    <button onClick={increment}>Click Me</button>
+                </>
+            )
+        }
+        
+        function Card(){
+            return(
+                <>
+            <div className="card" style={{width: '18rem;'}}>
+                    <img src="..." className="card-img-top" alt="..."/>
+             <div className="card-body">
+                 <h5 className="card-title">Card title.  </h5>
+                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" className="btn btn-primary">Go somewhere</a>
+               </div>
+            </div>
+            </>
+            
+            )
+        }
+        function ColorDisplay(){ //Data flow
+            const [color, setColor] = React.useState("red") //State lives in parent Component
+            return(
+                <>
+                    <Display args={color}/>
+                    <button onClick={()=>setColor("yellow")}>Yellow</button>
+                    <button onClick={()=>setColor("blue")}>Blue</button>
+                </>
+            )
+        }
+
+        function Display({args}){   //Data flow means passing State as Props
+            return(
+                <>
+                    <h2>Color changed to: {args}</h2>
+                    {/*Child Component receive the State through props*/}
+                    {/*Data Always flows in one way i.e Parent to Child*/}
+                </>
+            )
+        }
+        function App(){ 
+            return(
+                <>     {/*React Fragment*/}
+               <h1>This is App component</h1> 
+               <h2>This is app well</h2>
+               <Component/> 
+               <Component_props args={'Hello Yolisa'}/>  {/* Using Component inside App component */} 
+               <Card/>
+               <Card/>
+               <Card/>
+               <Counter/>
+                <ColorDisplay/>
+               </>
+            )
+        }
+
+        ReactDOM.render(<App/>,document.getElementById('root'))
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
