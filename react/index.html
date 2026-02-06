@@ -1,3 +1,6 @@
+<!--This documentation shows implementation of React (A JavaScript Library) in plain
+    HTML5 document -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,26 +19,75 @@
     <!-- Babel also allows for JavaScript and XML i.e JavaScript and HTML code combined -->
     <!-- For eg: Below script consists of return value of HTML code but implemented in JavaScript-->
     <script type="text/babel">
-        function Component(){ // component must start with capital letter
-            return(
-                <>
-                <h1>This is component</h1>
+        function App()
+        {
+            return (
+                <>  {/*This is known react fragment which helps in returning multiple elements*/}
+                    <header> {/*HTML code inside JavaScript, only possible because of Babel*/}
+                        <h1>This is a header</h1>
+                    </header>
+
+                    <Component_section/> {/*Component in React*/}
+                    <Component_section/> {/*Component Reuse*/}
+                    <Component_prop args={[1,2,3,4]}/> {/*Passing array as prop*/}
+                    <Component_prop args={5}/> {/*Passing number as prop*/}
+                    <Component_card title="Project_1" /> {/*Practical example of props*/}
+                    <Component_card title="Project_2" />
+                    {/*Here title and args are user defined, data type is defined by data itself*/}
+                    {/*Props are mostly used to reduce redundancy in writing code*/}
+                    <Counter/> {/*State Management in React*/}
+                    <ColorDisplay/> {/*Data flow i.e State management + Props*/}
                 </>
             )
         }
-        function Component_props(props){ {/* props is used to pass data from one component to another component */}
+
+        function Component_section(){   //A separate component
             return(
                 <>
-                <h2>This componennt uses props. {props.args}</h2>
+                    <section>
+                        <p>This is section</p>
+                    </section>
                 </>
             )
         }
+
+        function Component_prop(props){
+            return(
+                <>
+                    <h2>This is {props.args} </h2>
+                </>
+            )
+        }
+
+        function Component_card(props){
+            return(
+                <>
+                    <div className="card" style={{width: "18rem"}}> {/* React implicitly performs
+                        card.style.width = '18rem' , due to which style must be an object*/}
+                        <img src="..." className="card-img-top" alt="..."/>
+                        <div className="card-body">
+                            <h5 className="card-title">{props.title}</h5>
+                            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+
+                    {/* Note: When implenting Bootstrap in JSX
+                        class => className
+                        style must be an object without semicolon (;)
+                        i.e style={{width: "18rem", backgroundColor: "red"}
+                        self closing tags must be explicitly closed
+                        i.e <img> => <img/>*/}
+                </>
+            )
+        }
+
         function Counter() // State Management in React
         {
             const [count, setCount] = React.useState(0) 
-           {/*'count' is a variable, setCount is a function which can alter value of variable 'counter' 
+            /*'count' is a variable, setCount is a function which can alter value of variable 'counter' 
                React is an object here, useState is method of React (React Hook)
-               Here, useState hook initializes variable count to 0*/}
+               Here, useState hook initializes variable count to 0*/
             function increment(){
                 setCount(count + 1)
             }
@@ -47,22 +99,7 @@
                 </>
             )
         }
-        
-        function Card(){
-            return(
-                <>
-            <div className="card" style={{width: '18rem;'}}>
-                    <img src="..." className="card-img-top" alt="..."/>
-             <div className="card-body">
-                 <h5 className="card-title">Card title.  </h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
-               </div>
-            </div>
-            </>
-            
-            )
-        }
+
         function ColorDisplay(){ //Data flow
             const [color, setColor] = React.useState("red") //State lives in parent Component
             return(
@@ -83,23 +120,8 @@
                 </>
             )
         }
-        function App(){ 
-            return(
-                <>     {/*React Fragment*/}
-               <h1>This is App component</h1> 
-               <h2>This is app well</h2>
-               <Component/> 
-               <Component_props args={'Hello Yolisa'}/>  {/* Using Component inside App component */} 
-               <Card/>
-               <Card/>
-               <Card/>
-               <Counter/>
-                <ColorDisplay/>
-               </>
-            )
-        }
 
-        ReactDOM.render(<App/>,document.getElementById('root'))
+        ReactDOM.render(<App/>, document.getElementById('root'))
     </script>
 </head>
 <body>

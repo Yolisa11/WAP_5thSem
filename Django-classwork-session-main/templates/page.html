@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ Page
+{% endblock %}
+
+{% block content %}
+    <h1> hello world from page.html </h1>
+    <a href="{% url 'home' %}" class="btn btn-primary px-5 py-3 fs-3">Back</a>
+    <h2>You visited this page : {{visits}} times</h2>
+{% endblock %}

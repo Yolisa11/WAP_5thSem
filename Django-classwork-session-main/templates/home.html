@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+ home
+{% endblock %}
+
+{% block content %}
+    <h1>Hello world from home.html</h1>
+    <a href="{% url 'page' %}" class="btn btn-primary px-5 py-3 fs-3">Click me</a>
+{% endblock %}
