@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+ Login
+{% endblock %}
+
+{% block content %}
+        <form method="POST" class="w-25 d-flex flex-column align-items-center justify-content-center p-5 mx-auto mt-5" 
+         style="border: 2px solid black; border-radius: 0.5rem;">
+            {% csrf_token %}
+            <h2>Login</h2>
+
+            <div class="mt-3 mb-3 w-100">
+                <label for="exampleFormControlInput1" class="form-label fs-3">Username</label>
+                <input type="text" class="form-control form-control-lg fs-3" placeholder="username" 
+                       name='username' style="border: 2px solid black; border-radius: 0.5rem;" required>
+            </div>
+
+            <div class="mb-3 w-100">
+                <label for="exampleFormControlInput1" class="form-label fs-3">Password</label>
+                <input type="password" class="form-control form-control-lg fs-3" placeholder="*********"
+                       name='password' style="border: 2px solid black; border-radius: 0.5rem;" required>
+            </div>
+
+            <button type="submit" name='verify' class="btn btn-success px-5 py-3 mt-3 fs-3">Login</button>
+        </form>
+{% endblock %}
